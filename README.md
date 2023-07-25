@@ -1,4 +1,4 @@
-# Final Project Client - React
+# Final Project Client - Angular
 
 ## Team Name: GROUP 6ix
 
