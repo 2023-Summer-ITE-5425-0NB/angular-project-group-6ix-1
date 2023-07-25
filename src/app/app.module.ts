@@ -1,16 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { CartComponent } from './cart/cart.component';
+import { EventsComponent } from './events/events.component';
+import { ArtisttestComponent } from './artisttest/artisttest.component';
+import { VisitComponent } from './visit/visit.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component'; 
+import { RouterModule } from '@angular/router'; 
+import { FormsModule } from '@angular/forms'; 
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    PortfolioComponent,
+    ShoppingComponent,
+    CartComponent,
+    EventsComponent,
+    ArtisttestComponent,
+    VisitComponent,
+    LoginComponent,
+    RegisterComponent // Add NavbarComponent to the declarations
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

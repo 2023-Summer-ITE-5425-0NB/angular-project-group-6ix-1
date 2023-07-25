@@ -1,0 +1,56 @@
+<div class="container">
+  <!-- <div className="form-text">
+    <h1>
+      Visit Gallery
+    </h1>
+    <p>Visit my gallery personally .Just select the date and book your time slot.</p>
+  </div> -->
+
+  <form action="https://getform.io/f/eab9c82b-fbe8-4790-97e6-88715ee8f9b4" method="POST" (ngSubmit)="onSubmit(myform)" #myform="ngForm" class="form-container">
+    <h1>      Visit Gallery    </h1>
+    <p>Visit my gallery personally .Just select the date and book your time slot.</p>
+
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" name="name" ngModel required #nameInput="ngModel" />
+      <div *ngIf="nameInput.invalid && nameInput.touched" class="error-message">Name is required</div>
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" name="email" ngModel required #emailInput="ngModel" />
+      <div *ngIf="emailInput.invalid && emailInput.touched" class="error-message">Email is required</div>
+    </div>
+  
+    <div class="form-group">
+      <label for="time">What Time?</label>
+      <input type="time" name="time" ngModel required #timeInput="ngModel" />
+      <div *ngIf="timeInput.invalid && timeInput.touched" class="error-message">Enter the time.</div>
+    </div>
+  
+    <div class="form-group">
+      <label for="date">Which Date?</label>
+      <input type="date" name="date" ngModel required #dateInput="ngModel" />
+      <div *ngIf="dateInput.invalid && dateInput.touched" class="error-message">Enter the Date.</div>
+    </div>
+  
+    <div class="form-group">
+      <label for="contact">Contact No:</label>
+      <input type="number" name="contact" ngModel required #contactInput="ngModel" />
+      <div *ngIf="contactInput.invalid && contactInput.touched" class="error-message">Enter the Contact.</div>
+    </div>
+  
+    <input type="submit" [disabled]="myform.invalid" value="Submit" />
+  </form>
+  <div class="image-container">
+    <img src="https://cdn.shopify.com/s/files/1/0526/9805/4856/files/1815714272-huge.jpg?v=1679494275&width=832" alt="Your Image"/>
+    <div class="image-text">
+        <p>Take Advantage of our</p>
+        <h2>PHOTOMONTAGE SERVICE</h2>
+        <p><span>VISIT OUR ART GALLERY TODAY | SEE YOU THERE</span></p>
+        <a href="#" class="learn-more-button">Learn More</a>
+    </div>
+  </div>
+  
+
+</div>

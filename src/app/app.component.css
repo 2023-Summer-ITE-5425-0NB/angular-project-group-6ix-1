@@ -1,0 +1,20 @@
+/* Styling for the entire navbar */
+.navbar {
+  background-color: #ffecec; /* Set your desired background color here */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Styling for the links in the navbar */
+.navbar a {
+  color: #000000; /* Set your desired text color for the links */
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect on links */
+.navbar a:hover {
+  background-color: #ff5757; /* Set your desired background color on hover */
+}

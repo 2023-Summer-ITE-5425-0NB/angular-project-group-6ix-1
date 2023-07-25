@@ -1,0 +1,127 @@
+/* Container to hold the form and image */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.form-text{
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+.form-text h1{
+  color: black;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.form-text p{
+  color: black;
+  font-size: large;
+}
+
+/* Form container styling */
+.form-container {
+  flex: 1;
+  padding-right: 20px;
+  /* background-color: #ffecec;  */
+  margin-top: 40px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+/* Input styling */
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff5757; /* Error message color */
+  font-size: 14px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff5757; /* Submit button background color */
+  color: #fff; /* Submit button text color */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:disabled {
+  background-color: #ccc; /* Disabled submit button background color */
+  cursor: not-allowed;
+}
+
+/* Image container */
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.image-container img {
+  width: 100vh;
+  height:55vh;
+}
+
+/* Image text styling */
+.image-text {
+  position: absolute;
+  /* background-color: rgba(255, 236, 236, 0.8);  */
+  padding: 20px;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.image-text p {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 4px;
+  font-size: 15px;
+}
+.image-text span{
+  font-size: 18px;
+    font-weight: bold;
+}
+
+.image-text h2 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ff5757;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.learn-more-button:hover {
+  background-color: #f44336;
+}
