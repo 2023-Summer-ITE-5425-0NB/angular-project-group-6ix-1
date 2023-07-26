@@ -1,1 +1,20 @@
-<p>portfolio works!</p>
+<h1 class="title">These are some of my works</h1>
+<div class="main">
+<div id="grid">
+  <div class="box" *ngFor="let item of jsonData; let i = index" (click)="openModal(i)">
+    <img [src]="item.imageLocation" alt="">
+    {{item.name}}
+  </div>
+</div>
+
+<div class='modal-container' [ngClass]="{'show': showModal}">
+  <div class="modal">
+    <h2>Description</h2>
+    <p id="description">
+      {{currentDescription}}
+    </p>
+    <i id='close' class="fa-solid fa-xmark" (click)="closeModal()"></i>
+    <button id="viewDetails" (click)="viewDetails()">View in Detail</button>
+  </div>
+</div>
+</div>
