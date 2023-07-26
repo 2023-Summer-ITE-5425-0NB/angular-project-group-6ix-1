@@ -1,1 +1,55 @@
-<p>events works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact US - Vincent Van-Dog</title>
+</head>
+<body id="body">
+  <section class="hero" id="hero">
+    <div class="hero__text">
+      <h2>Events</h2>
+      <h1>Best events you'll ever see in the <span>Animal Kingdom</span></h1>
+      <p>
+        Vincent wants to bring everyone together, check out our events where you and your family
+        can meet tons of <b> new furry friends</b>
+      </p>
+    </div>
+    <img
+      src="https://www.petcompanionmag.com/wp-content/uploads/2020/06/events.png"
+      alt="two happy dogs"
+      class="hero__img"
+    />
+  </section>
+  <section class="cardContainer" id="cardContainer">
+    <span *ngFor="let event of jsonData" class="card">
+      <img
+        [src]="event.img"
+        [alt]="event.name"
+        class="card__img"
+      />
+      <h3 class="card__title">{{ event.name }}</h3>
+      <p class="card__text">{{ event.content }}</p>
+      <button class="btn-join" type="button" (click)="openModal(event)" [disabled]="event.name === 'Comming Soon'">More Info</button>
+    </span>
+  </section>
+
+  <div *ngIf="activeModalData" class='modal-container' [ngClass]="{'show': activeModalData}">
+    <div class="modal">
+      <h2>{{activeModalData.name}}</h2>
+      <p id="description">
+        {{activeModalData.content}}
+      </p>
+      <p id="date">
+        Save the date : {{activeModalData.date}}
+      </p>
+      <p id="price">
+        Price/person : CAD {{activeModalData.price}}
+      </p>
+      <i id='close' class="fa-solid fa-xmark" (click)="closeModal()"></i>
+      <button id="viewDetails">View in Detail</button>
+    </div>
+  </div>
+</body>
+</html>
