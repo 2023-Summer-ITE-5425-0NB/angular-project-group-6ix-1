@@ -12,7 +12,8 @@ import { VisitComponent } from './visit/visit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'; 
 import { RouterModule } from '@angular/router'; 
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import { IndividualComponent } from './individual/individual.component'; 
 
 
 
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     ArtisttestComponent,
     VisitComponent,
     LoginComponent,
-    RegisterComponent // Add NavbarComponent to the declarations
+    RegisterComponent,
+    IndividualComponent // Add NavbarComponent to the declarations
   ],
   imports: [
     BrowserModule,

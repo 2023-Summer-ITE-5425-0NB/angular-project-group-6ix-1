@@ -11,6 +11,7 @@ import { ArtisttestComponent } from './artisttest/artisttest.component';
 import { VisitComponent } from './visit/visit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { IndividualComponent } from './individual/individual.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
       { path: 'visit', component: VisitComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'individual/:id', component: IndividualComponent },
     ]
   },
 ];
