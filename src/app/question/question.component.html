@@ -1,0 +1,35 @@
+<div>
+    <span>{{ question.question }}</span>
+    <div>
+      <input
+        type="radio"
+        [value]="'OptA'"
+        [name]="question._id"
+        [id]="question._id + 'A'"
+        [checked]="isRadioSelected('OptA')"
+        (change)="handleRadioClick($event)"
+      />
+      <label [htmlFor]="question._id + 'A'">{{ question.optA }}</label>
+      <br />
+      <input
+        type="radio"
+        [value]="'OptB'"
+        [name]="question._id"
+        [id]="question._id + 'B'"
+        [checked]="isRadioSelected('OptB')"
+        (change)="handleRadioClick($event)"
+      />
+      <label [htmlFor]="question._id + 'B'">{{ question.optB }}</label>
+      <br />
+      <input
+        type="radio"
+        [value]="'OptC'"
+        [name]="question._id"
+        [id]="question._id + 'C'"
+        [checked]="isRadioSelected('OptC')"
+        (change)="handleRadioClick($event)"
+      />
+      <label [htmlFor]="question._id + 'C'">{{ question.optC }}</label>
+    </div>
+  </div>
+  

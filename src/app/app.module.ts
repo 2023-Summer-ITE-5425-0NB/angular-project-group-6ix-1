@@ -13,7 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'; 
 import { RouterModule } from '@angular/router'; 
 import { FormsModule } from '@angular/forms';
-import { IndividualComponent } from './individual/individual.component'; 
+import { IndividualComponent } from './individual/individual.component';
+import { QuestionComponent } from './question/question.component';
+import { QuestionListComponent } from './question-list/question-list.component';
+
 
 
 
@@ -29,7 +32,10 @@ import { IndividualComponent } from './individual/individual.component';
     VisitComponent,
     LoginComponent,
     RegisterComponent,
-    IndividualComponent // Add NavbarComponent to the declarations
+    IndividualComponent,
+    QuestionComponent,
+    QuestionListComponent,
+
   ],
   imports: [
     BrowserModule,
