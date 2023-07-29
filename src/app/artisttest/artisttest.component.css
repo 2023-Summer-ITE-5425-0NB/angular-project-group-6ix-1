@@ -1,0 +1,179 @@
+/* hide input number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* elements by type */
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.nav-hamb {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Main */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+    min-height: 100vh;
+}
+
+/* Artist Test page */
+
+.imagesGallery {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 16em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 30%;
+    max-height: 30%;
+    border-radius: 5%;
+}
+
+.titleTest {
+    margin: 0 62px 30px 62px;
+    padding-bottom: 3px;
+    font-size: 100%;
+    text-align: center;
+}
+
+fieldset.artistTest {
+    background-color: #ffffff;
+    border-color: #f8cbaa;
+    border-style: solid;
+    max-width: 600px;
+    min-width: 350px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 16px;
+}
+
+legend.testLegend {
+    background: #f39696;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #f8cbaa;
+    margin-left: 20px;
+}
+
+span {
+    display: inline-block;
+    margin: 40px 0 10px 0;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: lightgrey;
+    width: 1em;
+    height: 1em;
+    border: 0.01em solid grey;
+    border-radius: 70%;
+}
+
+input[type="radio"]:checked {
+    background-color: #ff5757;
+}
+
+label{
+    margin-left: 8px;
+}
+
+div.btnDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+button {
+    outline: none;
+    border: 0;
+    background-color: white;
+}
+
+button.testBtn {
+    color: #ffffff;
+    background-color: #ff5757;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    border-style: none;
+    box-sizing: border-box;
+    padding: 20px 32px;
+}
+
+button#retryBtn {
+    color: #ffffff;
+    background-color: #ff5757;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    padding: 20px 32px;
+}
+
+button.testBtn:hover,
+button#retryBtn:hover,
+button.testBtn:focus,
+button#retryBtn:focus {
+    background-color: #f39696;
+}
+
+.finishTest {
+    background: #f39696;
+    color: black;
+    box-shadow: 0 0 0 5px #f8cbaa;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* The code below is regarding responsive design */
+
+/* Tablet screen */
+
+@media only screen and (max-width: 768px) {
+
+    .titleTest {
+        font-size: 120%;
+    }
+
+    .artistTest {
+        font-size: 100%;
+    }
+
+}
+
+/* Mobile screen */
+
+@media (max-width: 576px) {
+
+    .titleTest {
+        font-size: 120%;
+    }
+
+    .artistTest {
+        font-size: 80%;
+    }
+}

@@ -1,0 +1,43 @@
+div.btnDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+button {
+    outline: none;
+    border: 0;
+    background-color: white;
+}
+
+button.testBtn {
+    color: #ffffff;
+    background-color: #ff5757;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    border-style: none;
+    box-sizing: border-box;
+    padding: 20px 32px;
+}
+
+button#retryBtn {
+    color: #ffffff;
+    background-color: #ff5757;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    padding: 20px 32px;
+}
+
+button.testBtn:hover,
+button#retryBtn:hover,
+button.testBtn:focus,
+button#retryBtn:focus {
+    background-color: #f39696;
+}

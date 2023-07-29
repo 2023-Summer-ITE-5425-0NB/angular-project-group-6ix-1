@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let q of questions">
+      <app-question [question]="q"></app-question>
+    </div>
+    <div class="btnDiv">
+      <button class="testBtn" (click)="calculateResult()">Check Results</button>
+      <button class="testBtn" (click)="sendPostRequest()">Suggest Question</button>
+    </div>
+  </div>
+  
