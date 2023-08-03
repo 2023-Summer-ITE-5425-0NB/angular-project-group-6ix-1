@@ -30,6 +30,7 @@ export class QuestionListComponent implements OnInit {
       .subscribe(
         (response) => {
           this.questions = response;
+          console.log(response)
         },
         (error) => {
           console.log(error);

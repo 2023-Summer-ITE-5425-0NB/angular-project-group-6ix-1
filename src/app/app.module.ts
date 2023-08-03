@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { IndividualComponent } from './individual/individual.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionListComponent } from './question-list/question-list.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -41,7 +41,8 @@ import { QuestionListComponent } from './question-list/question-list.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
