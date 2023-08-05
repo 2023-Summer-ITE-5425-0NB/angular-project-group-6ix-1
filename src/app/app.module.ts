@@ -12,7 +12,7 @@ import { VisitComponent } from './visit/visit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'; 
 import { RouterModule } from '@angular/router'; 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndividualComponent } from './individual/individual.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionListComponent } from './question-list/question-list.component';
@@ -42,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
