@@ -25,21 +25,21 @@
   <section class="cardContainer" id="cardContainer">
     <span *ngFor="let event of jsonData" class="card">
       <img
-        [src]="event.img"
-        [alt]="event.name"
+        [src]="event.imageUrl"
+        [alt]="event.title"
         class="card__img"
       />
-      <h3 class="card__title">{{ event.name }}</h3>
-      <p class="card__text">{{ event.content }}</p>
-      <button class="btn-join" type="button" (click)="openModal(event)" [disabled]="event.name === 'Comming Soon'">More Info</button>
+      <h3 class="card__title">{{ event.title }}</h3>
+      <p class="card__text">{{ event.description }}</p>
+      <button class="btn-join" type="button" (click)="openModal(event)">More Info</button>
     </span>
   </section>
 
   <div *ngIf="activeModalData" class='modal-container' [ngClass]="{'show': activeModalData}">
     <div class="modal">
-      <h2>{{activeModalData.name}}</h2>
+      <h2>{{activeModalData.title}}</h2> <!-- 改为title -->
       <p id="description">
-        {{activeModalData.content}}
+        {{activeModalData.description}} <!-- 改为description -->
       </p>
       <p id="date">
         Save the date : {{activeModalData.date}}
