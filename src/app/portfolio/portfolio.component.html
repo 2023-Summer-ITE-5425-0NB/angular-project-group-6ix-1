@@ -2,8 +2,8 @@
 <div class="main">
 <div id="grid">
   <div class="box" *ngFor="let item of jsonData; let i = index" (click)="openModal(i)">
-    <img [src]="item.imageLocation" alt="">
-    {{item.name}}
+    <img [src]="item.imageUrl" alt="">
+    {{item.title}}
   </div>
 </div>
 
