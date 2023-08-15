@@ -1,1 +1,13 @@
-<p>about works!</p>
+<div class="my-posts-container">
+  <h1>ABOUT</h1>
+  <div *ngFor="let post of aboutData; let i = index" [ngClass]="{'post-card': true, 'post-reverse': i % 2 === 1}">
+    <div class="post-content">
+      <div class="post-text">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+      </div>
+    </div>
+    <img src="{{ post.imageUrl }}" alt="" class="post-image">
+  </div>
+</div>
+

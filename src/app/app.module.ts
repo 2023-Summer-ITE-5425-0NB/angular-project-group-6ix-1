@@ -17,6 +17,9 @@ import { IndividualComponent } from './individual/individual.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionListComponent } from './question-list/question-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 
 
@@ -35,6 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     IndividualComponent,
     QuestionComponent,
     QuestionListComponent,
+    AboutComponent,
+    ContactComponent
 
   ],
   imports: [

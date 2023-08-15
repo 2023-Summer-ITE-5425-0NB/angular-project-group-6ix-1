@@ -1,0 +1,42 @@
+.my-posts-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .post-card {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fffafa;
+  }
+  
+  .post-card.post-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .post-text p{
+    font-size: 20px;
+    margin: 20px;
+  }
+  .post-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 270px;
+    transition: transform 0.2s;
+  }
+  .post-card:hover .post-image {
+    transform: scale(1.1);
+  }
+  

@@ -11,7 +11,7 @@ type EventCard = {
   __v: number;
 }
 
-@Component({
+@Component({  
   selector: 'app-events',
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
