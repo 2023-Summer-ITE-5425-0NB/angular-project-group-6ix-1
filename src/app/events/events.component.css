@@ -221,3 +221,8 @@
     transform: translateY(none);
   }
 }
+
+
+.add-event-btn-container {
+  margin-top: 50px; 
+}

@@ -22,6 +22,9 @@
       class="hero__img"
     />
   </section>
+  <div fxLayout="row" fxLayoutAlign="center center" class="add-event-btn-container">
+    <button mat-raised-button color="primary" (click)="openUploadEventDialog()">Add New Event</button>
+  </div>
   <section class="cardContainer" id="cardContainer">
     <span *ngFor="let event of jsonData" class="card">
       <img
@@ -48,7 +51,7 @@
         Price/person : CAD {{activeModalData.price}}
       </p>
       <i id='close' class="fa-solid fa-xmark" (click)="closeModal()"></i>
-      <button id="viewDetails">View in Detail</button>
+      <button mat-raised-button (click)="deleteEvent(activeModalData._id)" color="primary">Delete</button>
     </div>
   </div>
 </body>

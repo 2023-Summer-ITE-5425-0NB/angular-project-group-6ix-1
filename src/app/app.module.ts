@@ -25,6 +25,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { UploadArtworkDialogComponent } from './upload-artwork-dialog/upload-artwork-dialog.component';
+import { UploadEventDialogComponent } from './upload-event-dialog/upload-event-dialog.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -44,7 +47,8 @@ import { UploadArtworkDialogComponent } from './upload-artwork-dialog/upload-art
     QuestionListComponent,
     AboutComponent,
     ContactComponent,
-    UploadArtworkDialogComponent
+    UploadArtworkDialogComponent,
+    UploadEventDialogComponent
 
   ],
   imports: [
@@ -58,7 +62,9 @@ import { UploadArtworkDialogComponent } from './upload-artwork-dialog/upload-art
     MatButtonModule,
     FlexLayoutModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
