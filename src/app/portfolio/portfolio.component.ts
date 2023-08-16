@@ -41,10 +41,9 @@ export class PortfolioComponent {
     }
   }
 
-  yourClickFunction(){
+  openUploadDialog(){
     const dialogRef = this.dialog.open(UploadArtworkDialogComponent, {
       width: '500px',
-      // other configuration here if needed
     });
   
     dialogRef.afterClosed().subscribe(result => {

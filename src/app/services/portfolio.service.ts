@@ -18,6 +18,10 @@ export class PortfolioService {
     );
   }
 
+  addPortfolioItem (item: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, item);
+  }
+
   get jsonData(): any[] {
     return this._jsonData;
   }
