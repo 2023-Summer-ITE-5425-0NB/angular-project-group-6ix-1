@@ -1,4 +1,7 @@
 <h1 class="title">These are some of my works</h1>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <button mat-raised-button color="primary" (click)="yourClickFunction()">Click to Upload New Artwork</button>
+</div>
 <div class="main">
 <div id="grid">
   <div class="box" *ngFor="let item of jsonData; let i = index" (click)="openModal(i)">

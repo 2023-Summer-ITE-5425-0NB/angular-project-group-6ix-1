@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Upload New Artwork</h2>
+<div fxLayout="column" fxLayoutGap="20px">
+  </div>
+<mat-dialog-content>
+  <form>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" placeholder="Enter artwork title">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput rows="4" placeholder="Enter artwork description"></textarea>
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button type="button" (click)="onFileInput()">Upload Image</button>
+      <input type="file" hidden (change)="onFileChange($event)">
+      <span *ngIf="uploadedFileName">{{ uploadedFileName }}</span>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions fxLayout="row" fxLayoutAlign="center center">
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

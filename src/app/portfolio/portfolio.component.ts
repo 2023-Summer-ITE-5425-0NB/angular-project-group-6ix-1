@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PortfolioService } from '../services/portfolio.service';
+import { MatDialog } from '@angular/material/dialog';
+import { UploadArtworkDialogComponent } from '../upload-artwork-dialog/upload-artwork-dialog.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,7 +11,7 @@ import { PortfolioService } from '../services/portfolio.service';
 })
 export class PortfolioComponent {
 
-  constructor(private router: Router, private portfolioService: PortfolioService) { }
+  constructor(private router: Router, private portfolioService: PortfolioService, private dialog: MatDialog) { }
 
   showModal = false;
   currentDescription = '';
@@ -37,5 +39,16 @@ export class PortfolioComponent {
     if (this.currentIndex !== null) { 
       this.router.navigate(['/individual', this.currentIndex]);
     }
+  }
+
+  yourClickFunction(){
+    const dialogRef = this.dialog.open(UploadArtworkDialogComponent, {
+      width: '500px',
+      // other configuration here if needed
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }

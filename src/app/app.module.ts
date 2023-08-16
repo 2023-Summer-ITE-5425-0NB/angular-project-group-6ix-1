@@ -19,8 +19,12 @@ import { QuestionListComponent } from './question-list/question-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { UploadArtworkDialogComponent } from './upload-artwork-dialog/upload-artwork-dialog.component';
 
 
 @NgModule({
@@ -39,7 +43,8 @@ import { ContactComponent } from './contact/contact.component';
     QuestionComponent,
     QuestionListComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    UploadArtworkDialogComponent
 
   ],
   imports: [
@@ -48,7 +53,12 @@ import { ContactComponent } from './contact/contact.component';
     RouterModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
