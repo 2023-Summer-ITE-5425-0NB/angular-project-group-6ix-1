@@ -4,9 +4,15 @@
 </div>
 <div class="main">
 <div id="grid">
-  <div class="box" *ngFor="let item of jsonData; let i = index" (click)="openModal(i)">
+  <div class="box" *ngFor="let item of jsonData; let i = index" (click)="openModal(i)" (mouseenter)="setHoveringIndex(i)" 
+  (mouseleave)="setHoveringIndex(null)">
     <img [src]="item.imageUrl" alt="">
-    {{item.title}}
+    <div class="title-container">
+      {{item.title}}
+      <div fxLayout="row" fxLayoutAlign="center center">
+      <button mat-button *ngIf="hoveringIndex === i" (click)="deleteItem(item._id, $event)" style="color: white;">Delete</button>
+    </div>
+    </div>
   </div>
 </div>
 

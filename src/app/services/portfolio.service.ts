@@ -22,6 +22,10 @@ export class PortfolioService {
     return this.http.post<any>(this.apiUrl, item);
   }
 
+  deletePortfolioItem(itemId: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${itemId}`);
+  }
+
   get jsonData(): any[] {
     return this._jsonData;
   }

@@ -17,6 +17,8 @@ export class PortfolioComponent {
   currentDescription = '';
   currentIndex: number | null = null;
 
+  hoveringIndex: number | null = null;
+
   get jsonData() {
     return this.portfolioService.jsonData;
   }
@@ -49,5 +51,21 @@ export class PortfolioComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  setHoveringIndex(index: number | null) {
+    this.hoveringIndex = index;
+  }
+
+  deleteItem(itemId: string, event: Event) {
+    event.stopPropagation();
+    this.portfolioService.deletePortfolioItem(itemId).subscribe(
+      () => {
+        this.portfolioService.fetchPortfolioItems().subscribe();
+      },
+      error => {
+        console.error("Failed to delete item:", error);
+      }
+    );
   }
 }
