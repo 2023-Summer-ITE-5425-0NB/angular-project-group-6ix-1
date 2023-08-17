@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { catchError, map, Observable } from 'rxjs';
 import { Product } from '../models/product';
 
 @Injectable({
@@ -13,7 +13,11 @@ export class ProductsService {
 
   getProducts(): Observable<Product[]> {
     return this.http.get<any>(this.urlGetProducts).pipe(
-      map(response => response.data)
+      map(response => response),
+      catchError(error => {
+        console.error('Error fetching products:', error);
+        throw error;
+      })
     );
   }
 
