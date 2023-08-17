@@ -4,7 +4,17 @@
 
 ## Team Member:
 Tuyi Chen, Anton Vinokurov, Zhangzhi Wang, Shivam Sharma
-## Shivam Sharma
+
+### Tuyi Chen (N01531425)
+- Shopping page:
+   - CRUD operations on product
+   - Product quantity increase and decrease
+   - Add to cart
+- Cart page:
+   - Show in-cart products only
+   - Calculate subtotal
+
+### Shivam Sharma (N01513740)
 
 Visit Us Page - Appointment Page : There is a form on the website from which the user can book an appointment. User can select a date and the time.
 
