@@ -17,8 +17,8 @@
         </div>
   
         <div class="form-group">
-          <label for="contact">Contact No:</label>
-          <input type="number" name="contact" ngModel required #contactInput="ngModel" />
+          <label for="contact">Message</label>
+          <input type="textarea" name="contact" ngModel required #contactInput="ngModel" class="textarea"/>
           <div *ngIf="contactInput.invalid && contactInput.touched" class="error-message">Enter the Contact.</div>
         </div>
   
