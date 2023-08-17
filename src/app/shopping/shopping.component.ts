@@ -115,6 +115,16 @@ export class ShoppingComponent implements OnInit {
     window.location.reload();
   }
 
+  decreaseQuantity(product: Product) {
+    if (product.quantity > 1) {
+      product.quantity--;
+    }
+  }
+
+  increaseQuantity(product: Product) {
+    product.quantity++;
+  }
+
   ngOnInit(): void {
     this.productService.getProducts().subscribe((data) => {
       this.products = data;
