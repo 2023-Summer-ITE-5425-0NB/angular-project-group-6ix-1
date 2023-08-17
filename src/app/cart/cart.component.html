@@ -1,1 +1,16 @@
-<p>cart works!</p>
+<div class='products'>
+    <div *ngFor="let product of products">
+        <div class='product'>
+            <img [src]="getImagePath(product.image)" alt={{product.shortDesc}} [ngClass]="getSizeStyle(product.type)">
+            <p><br>
+                {{product.name}}<br>
+                {{product.type}} | {{ product.price | currency: 'CAD': 'symbol-narrow': '1.2-2' }}<br>
+                Subtotal: {{ calculateSubtotal(product) | currency: 'CAD': 'symbol-narrow': '1.2-2' }} 
+            </p>
+            <button type="button" class="btn btn-outline-dark" (click)="decreaseQuantity(product)">-</button>
+            {{ product.quantity }}
+            <button type="button" class="btn btn-outline-dark" (click)="increaseQuantity(product)">+</button>
+            <button type="submit" class="btn btn-light">Remove from Cart</button>
+        </div>
+    </div>
+</div>

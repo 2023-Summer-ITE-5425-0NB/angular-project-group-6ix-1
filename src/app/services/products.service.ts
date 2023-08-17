@@ -21,6 +21,17 @@ export class ProductsService {
     );
   }
 
+  getProductsInCart(): Observable<Product[]> {
+    const inCartUrl = this.url + 'in-cart'
+    return this.http.get<any>(inCartUrl).pipe(
+      map(response => response),
+      catchError(error => {
+        console.error('Error fetching in-cart products:', error);
+        throw error;
+      })
+    );
+  }
+
   addProduct(product: any): Observable<any> {
     return this.http.post<any>(this.url, product).pipe(
       catchError((error: HttpErrorResponse) => {
