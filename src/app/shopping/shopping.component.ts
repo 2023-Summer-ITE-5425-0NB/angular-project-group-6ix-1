@@ -1,7 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NewProduct } from '../models/new-product';
 import { Product } from '../models/product';
 import { ProductsService } from '../services/products.service';
 
@@ -13,6 +12,31 @@ import { ProductsService } from '../services/products.service';
 export class ShoppingComponent implements OnInit {
 
   products: Product[] = [];
+
+  product: Product = {
+    _id: '',
+    name: '',
+    type: '',
+    shortDesc: '',
+    longDesc: '',
+    image: '',
+    price: 0,
+    stock: 0,
+    inCart: false,
+    quantity: 0
+  };
+
+  newProduct: NewProduct = {
+    name: '',
+    type: '',
+    shortDesc: '',
+    longDesc: '',
+    image: '',
+    price: 0,
+    stock: 0,
+    inCart: false,
+    quantity: 0
+  }
   constructor(private _http: HttpClient, private productService: ProductsService) {}
 
   // generate css class name for the size of different product type
@@ -25,20 +49,73 @@ export class ShoppingComponent implements OnInit {
     return "../.."+productImage.substring(3);
   }
 
-  // handle add product form submission
+  // handle add/modify product form submission
   onSubmit(value: any) {
-    alert(`id: ${value.id}
-      \nname: ${value.name}
-      \ntype: CAD $${value.type}
-      \nshortDesc: ${value.shortDesc}
-      \nlongDesc: ${value.longDesc}
-      \nimage: ${value.image}
-      \nprice: ${value.price}
-      \nstock: ${value.stock}`);
+
+    if (!value._id) {
+      // add product
+      this.newProduct = {
+        name: value.name,
+        type: value.type,
+        shortDesc: value.shortDesc,
+        longDesc: value.longDesc,
+        image: value.image,
+        price: value.price,
+        stock: value.stock,
+        inCart: false,
+        quantity: 0
+      }
+
+      this.productService.addProduct(this.newProduct).subscribe(
+        response => {
+          if (response && response.status === 201) {
+            console.log('Add product successfully.');
+          } else {
+            console.error('Error adding product:', response);
+          }
+        }
+      );
+    } else {
+      // modify product
+      this.product = {
+        _id: value._id,
+        name: value.name,
+        type: value.type,
+        shortDesc: value.shortDesc,
+        longDesc: value.longDesc,
+        image: value.image,
+        price: value.price,
+        stock: value.stock,
+        inCart: false,
+        quantity: 0
+      }
+
+      this.productService.modifyProduct(this.product).subscribe(
+        response => {
+          console.log('Product added!', response);
+        }
+      );
+    }
+    // refresh page
+    window.location.reload();
+  }
+
+  // handle delete product
+  onDeleteProduct(productId: string) {
+    this.productService.deleteProduct(productId).subscribe(
+      response => {
+        if (response && response.status === 200) {
+          console.log('Delete product successfully.');
+        } else {
+          console.error('Error adding product:', response);
+        }
+      }
+    );
+    // refresh page
+    window.location.reload();
   }
 
   ngOnInit(): void {
-
     this.productService.getProducts().subscribe((data) => {
       this.products = data;
       console.log('Received products:', data);
