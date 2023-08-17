@@ -59,4 +59,16 @@ export class ProductsService {
       })
     );
   }
+  
+  addToCart(productId: string, quantity: number): Observable<any> {
+    const addToCartUrl = this.url + productId + '/add-to-cart';
+    const requestData = { inCart: true, quantity: quantity };
+    
+    return this.http.put<any>(addToCartUrl, requestData).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error('Error adding product to cart:', error);
+        throw error;
+      })
+    );
+  }
 }

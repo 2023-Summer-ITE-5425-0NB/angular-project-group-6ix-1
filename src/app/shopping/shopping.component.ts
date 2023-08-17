@@ -125,6 +125,14 @@ export class ShoppingComponent implements OnInit {
     product.quantity++;
   }
 
+  handleAddToCart(product: Product) {
+    this.productService.addToCart(product._id, product.quantity).subscribe(
+      (response) => {
+        console.log('Product added to cart:', response);
+      }
+    );
+  }
+
   ngOnInit(): void {
     this.productService.getProducts().subscribe((data) => {
       this.products = data;

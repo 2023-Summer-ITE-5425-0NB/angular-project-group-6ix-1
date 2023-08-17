@@ -83,7 +83,7 @@
             <button type="button" class="btn btn-outline-dark" (click)="decreaseQuantity(product)">-</button>
             {{ product.quantity }}
             <button type="button" class="btn btn-outline-dark" (click)="increaseQuantity(product)">+</button>
-            <button type="submit" class="btn btn-light">Add to Cart</button>
+            <button type="button" class="btn btn-light" (click)="handleAddToCart(product)">Add to Cart</button>
             <button type="submit" class="btn btn-light" (click)="onDeleteProduct(product._id)">x</button>
         </div>
     </div>
