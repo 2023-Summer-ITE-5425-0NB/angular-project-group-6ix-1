@@ -1,1 +1,29 @@
-<p>contact works!</p>
+<div class="card-container">
+    <div class="card">
+      <form action="https://getform.io/f/eab9c82b-fbe8-4790-97e6-88715ee8f9b4" method="POST" (ngSubmit)="onSubmit(myform)" #myform="ngForm" class="form-container">
+        <h1>Newsletter</h1>
+        <p>Let's keep in touch</p>
+  
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" name="name" ngModel required #nameInput="ngModel" />
+          <div *ngIf="nameInput.invalid && nameInput.touched" class="error-message">Name is required</div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" name="email" ngModel required #emailInput="ngModel" />
+          <div *ngIf="emailInput.invalid && emailInput.touched" class="error-message">Email is required</div>
+        </div>
+  
+        <div class="form-group">
+          <label for="contact">Contact No:</label>
+          <input type="number" name="contact" ngModel required #contactInput="ngModel" />
+          <div *ngIf="contactInput.invalid && contactInput.touched" class="error-message">Enter the Contact.</div>
+        </div>
+  
+        <input type="submit" [disabled]="myform.invalid" value="Submit" />
+      </form>
+    </div>
+  </div>
+  
