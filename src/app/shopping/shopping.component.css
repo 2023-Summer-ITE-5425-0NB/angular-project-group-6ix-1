@@ -1,0 +1,117 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+/* elements by type */
+button {
+    margin: 0px 10px 0px 10px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: #f8cbaa;
+    cursor: pointer;
+}
+
+/* elements by class */
+.btn:hover {
+    background-color: #f39696;
+    color: white;
+}
+.btn.active {
+    background-color: #f39696;
+    color: white;
+}
+.poster-size {
+    width: 230px;
+    height: 340px;
+    margin-bottom: 15px;
+}
+.card-size {
+    width: 300px;
+    height: 355px;
+}
+.notebook-size {
+    width: 300px;
+    height: 320px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.keychain-size {
+    width: 300px;
+    height: 275px;
+    margin: 40px 0px;
+}
+.add-product-form {
+  margin: 30px 50px 30px 50px;
+  border: 3px solid #f39696;
+}
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.product {
+  width: 300px;
+  height: 500px;
+  margin: 20px;
+  text-align: center;
+}
+.product p {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+
+/* one element by id */
+/* shop.html - images */
+#shop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+#shop div {
+    /* background-color: #f7f5f6; */
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+}
+#shopFilterBtn {
+    display: flex;
+    justify-content: center;
+}
+.filterDiv {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+/* product.html - images & specification */
+#product {
+    display: grid;
+    grid-template: repeat(4, 360px) / 30% 55%;
+    grid-gap: 40px;
+    justify-content: center;
+    margin: 20px 0px;
+}
+#product div {
+    /* background-color: #f7f5f6; */
+    line-height: 130%;
+    font-size: 16px;
+}
+#product div ul {
+    padding-left: 30px;
+}
+#product div span {
+    font-weight: bold;
+}
+#product div form label {
+    display: inline-block;
+    width: 117px;
+    margin-top: 5px;
+}
+#product-large-screen {
+    display: none;
+}
